@@ -61,7 +61,7 @@ The application developed with
 ### Api Endpoints
 
 Postman collection is here 
-[vending-machine.postman_collection.json](https://github.com/atesibrahim/)
+[vending-machine.postman_collection.json](https://github.com/atesibrahim/vending-machine/blob/master/src/main/resources/vending-machine.postman_collection.json)
 
 You will be found postman collection under `resource/postman-collection`
 
