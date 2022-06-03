@@ -1,7 +1,7 @@
 package com.ey.vendingmachine.service.product;
 
 import com.ey.vendingmachine.domain.Product;
-import com.ey.vendingmachine.model.reponse.ProductDispenseResponse;
+import com.ey.vendingmachine.model.response.ProductDispenseResponse;
 import com.ey.vendingmachine.model.request.ProductRequest;
 import com.ey.vendingmachine.repository.ProductRepository;
 import com.ey.vendingmachine.data.CoinAmount;

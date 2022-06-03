@@ -1,6 +1,6 @@
 package com.ey.vendingmachine.controller;
 
-import com.ey.vendingmachine.model.reponse.ProductDispenseResponse;
+import com.ey.vendingmachine.model.response.ProductDispenseResponse;
 import com.ey.vendingmachine.model.request.ProductRequest;
 import com.ey.vendingmachine.service.product.ProductService;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package com.ey.vendingmachine.model.reponse;
+package com.ey.vendingmachine.model.response;
 
 import lombok.Getter;
 import lombok.Setter;

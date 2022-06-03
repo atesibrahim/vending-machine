@@ -1,7 +1,7 @@
 package com.ey.vendingmachine.controller.advice;
 
-import com.ey.vendingmachine.model.reponse.ValidationErrorResponse;
-import com.ey.vendingmachine.model.reponse.Violation;
+import com.ey.vendingmachine.model.response.ValidationErrorResponse;
+import com.ey.vendingmachine.model.response.Violation;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;

@@ -2,7 +2,7 @@ package com.ey.vendingmachine.service.product;
 
 import com.ey.vendingmachine.data.CoinAmount;
 import com.ey.vendingmachine.domain.Product;
-import com.ey.vendingmachine.model.reponse.ProductDispenseResponse;
+import com.ey.vendingmachine.model.response.ProductDispenseResponse;
 import com.ey.vendingmachine.model.request.ProductRequest;
 import com.ey.vendingmachine.repository.ProductRepository;
 import org.junit.jupiter.api.Test;
@@ -15,7 +15,6 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.verifyNoInteractions;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
