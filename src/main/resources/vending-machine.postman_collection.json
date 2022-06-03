@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "63e12a47-8fd8-410b-9e6c-dda915fc11dc",
+		"name": "vending-machine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dispense Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put coins",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"insertedCoin\":25\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/coins",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"coins"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
