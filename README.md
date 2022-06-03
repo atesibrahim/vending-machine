@@ -8,7 +8,7 @@ Aim of Vending Machine Applicaiton is to dispense product to the customers who s
 ### Contents 
 
 - [Welcome](#welcome)
-- [Application Flow](#application-flow-process)
+- [Application Flow](#application-flow)
 - [Application Tech Stack](#application-tech-stack)
 - [Docker Build and Run](#docker-build-and-run)
 - [Api Endpoints](#api-endpoints)
