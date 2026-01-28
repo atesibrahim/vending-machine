@@ -18,7 +18,7 @@ public class ProductController {
 
     private final ProductService productService;
 
-    @PostMapping
+    @PostMapping("dispense")
     public ProductDispenseResponse dispense(@Valid @RequestBody ProductRequest productRequest) {
         return productService.dispense(productRequest);
     }
