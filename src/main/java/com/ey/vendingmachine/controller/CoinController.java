@@ -16,7 +16,7 @@ public class CoinController {
 
     private final CoinService coinService;
 
-    @PostMapping
+    @PostMapping("/sum")
     public String sum(@RequestBody @Validated CoinRequest coinRequest) {
         return coinService.sum(coinRequest.getInsertedCoin());
     }
