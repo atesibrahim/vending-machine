@@ -10,6 +10,7 @@ Aim of Vending Machine Applicaiton is to dispense product to the customers who s
 - [Welcome](#welcome)
 - [Application Flow](#application-flow)
 - [Application Tech Stack](#application-tech-stack)
+- [Start and Stop](#start-and-stop)
 - [Docker Build and Run](#docker-build-and-run)
 - [Api Endpoints](#api-endpoints)
   - [Put Coin](#put-coin)
@@ -50,6 +51,31 @@ The application developed with
 - **springdoc-openapi-ui** 
 
 ***Version 2.7.0 was used for all dependencies related to spring!***
+
+### Start and Stop
+
+> **Prerequisite:** [Amazon Corretto 17](https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/downloads-list.html) must be installed at  
+> `/Users/<you>/Library/Java/JavaVirtualMachines/corretto-17.0.18/Contents/Home`  
+> Update the `JAVA_HOME_PATH` variable in `start.sh` if your path differs.
+
+**Start the application:**
+
+```bash
+./start.sh
+```
+
+The script launches the app in the background, writes the process ID to `app.pid`, and prints the URLs:
+
+- Swagger UI → http://localhost:8090/swagger-ui/index.html
+- H2 Console → http://localhost:8090/h2-console
+
+**Stop the application:**
+
+```bash
+./stop.sh
+```
+
+The script reads the PID from `app.pid`, sends a graceful shutdown signal, and waits up to 10 seconds before forcing termination.
 
 ### Docker build and run
 

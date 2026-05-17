@@ -32,15 +32,17 @@ public class ProductServiceImpl implements ProductService {
                     .build();
         }
 
-        if (coinAmount.getBalance() < product.get().getPrice()) {
+        double balance = coinAmount.getBalance() != null ? coinAmount.getBalance() : 0.0;
+
+        if (balance < product.get().getPrice()) {
             return ProductDispenseResponse.builder()
                     .responseMessage("Unfortunately your balance is not sufficient.")
-                    .currentBalance(coinAmount.getBalance())
+                    .currentBalance(balance)
                     .build();
         }
 
         updateStock(product.get());
-        coinAmount.setBalance(coinAmount.getBalance() - product.get().getPrice());
+        coinAmount.setBalance(balance - product.get().getPrice());
         return ProductDispenseResponse.builder()
                 .productName(product.get().getName())
                 .responseMessage("THANK YOU")
