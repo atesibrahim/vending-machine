@@ -1,5 +1,6 @@
 package com.ey.vendingmachine.controller.advice;
 
+import com.ey.vendingmachine.model.response.ErrorResponse;
 import com.ey.vendingmachine.model.response.ValidationErrorResponse;
 import com.ey.vendingmachine.model.response.Violation;
 import org.springframework.http.HttpStatus;
@@ -24,5 +25,19 @@ public class ErrorHandlingControllerAdvice {
                     new Violation(fieldError.getField(), fieldError.getDefaultMessage()));
         }
         return error;
+    }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseBody
+    ErrorResponse onIllegalArgumentException(IllegalArgumentException e) {
+        return new ErrorResponse(e.getMessage(), "INVALID_ARGUMENT");
+    }
+
+    @ExceptionHandler(IllegalStateException.class)
+    @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
+    @ResponseBody
+    ErrorResponse onIllegalStateException(IllegalStateException e) {
+        return new ErrorResponse(e.getMessage(), "INVALID_STATE");
     }
 }
