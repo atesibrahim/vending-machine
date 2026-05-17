@@ -13,7 +13,7 @@ if [ -f "$PID_FILE" ]; then
 fi
 
 echo "Starting Vending Machine Application..."
-JAVA_HOME="$JAVA_HOME_PATH" mvn spring-boot:run &
+JAVA_HOME="$JAVA_HOME_PATH" ./mvnw spring-boot:run &
 MAVEN_PID=$!
 
 # Wait for the Spring Boot JVM child process to appear
